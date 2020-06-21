@@ -10,15 +10,12 @@ namespace GradeBook.GradeBooks
     {
         private bool weighted;
 
-        public RankedGradeBook(string name) : base(name)
+        public RankedGradeBook(string name, bool isWeighted) : base(name, isWeighted)
         {
-            Type = Enums.GradeBookType.Ranked;
+            Type = GradeBookType.Ranked;
         }
 
-        public RankedGradeBook(string name, bool weighted) : this(name)
-        {
-            this.weighted = weighted;
-        }
+       
 
         public override char GetLetterGrade(double averageGrade)
         {
